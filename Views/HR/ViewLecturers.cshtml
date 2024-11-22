@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<Microsoft.AspNetCore.Identity.IdentityUser>
+
+@{
+    ViewData["Title"] = "Lecturers";
+}
+
+
+<div class="AMAP-Claims-body">
+
+
+    <table class="product-table">
+        <tr>
+            <th colspan="8" class="product-table-head">Lecturers</th>
+        </tr>
+    <thead>
+        <tr class="column-heads">
+            <th>Email</th>
+            <th>UserName</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Email</td>
+                <td>@user.UserName</td>
+                <td>
+                        <a asp-action="EditLecturer" asp-route-id="@user.Id" class="PO-btn-A">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>

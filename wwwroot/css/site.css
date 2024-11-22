@@ -1,0 +1,326 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+
+body {
+    background-color: #EDF7FF;
+}
+
+
+/*Home*/
+.home-body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EDF7FF;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-sec1 {
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .home-sec1 img {
+        height: 300px;
+    }
+
+.home-body-links {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+}
+
+    .home-body-links a {
+        text-decoration: none;
+        color: #004080;
+        font-weight: bold;
+    }
+
+        .home-body-links a:hover {
+            text-decoration: underline;
+            background-color: #004080;
+            padding: 5px 30px 5px 30px;
+            border: 5px solid #004080;
+            border-radius: 20px;
+            color: white;
+        }
+
+.home-sec2 {
+    min-height: 220px;
+    background-color: #CDE9FF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.hs2-child img {
+    height: 80px;
+    width: 120px;
+}
+
+.hs2-child {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    width: 170px;
+    color: #004080;
+}
+/*Home end*/
+
+/*Add*/
+
+.claim-form {
+    width: 500px;
+    margin: 0 auto;
+    padding: 15px 50px 15px 50px;
+    border-radius: 5px;
+    background-color: #CDE9FF;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-section {
+    margin-bottom: 15px;
+}
+
+input {
+    background-color: #CDE9FF;
+    color: black;
+}
+
+    input::placeholder {
+        color: black;
+    }
+
+    input[type="text"], input[type="number"], input[type="password"] {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+        border: none;
+        border-bottom: 1px solid black;
+        box-sizing: border-box;
+    }
+
+    input[type="file"] {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    button:hover {
+        background-color: #218838;
+    }
+
+.hidden {
+    display: none;
+}
+
+.btn-submit {
+    background-color: #004080;
+    border: none;
+}
+
+    .btn-submit:hover {
+        background-color: #0056b3;
+    }
+
+.form-section button {
+    margin-top: 10px;
+}
+
+.add-body {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+}
+
+.ab-para {
+    width: 500px;
+    text-align: left;
+    margin-left: 50px;
+}
+
+.claim-form {
+}
+
+/*Add end*/
+
+
+/*AM and PC Claims list*/
+
+
+.AMAP-Claims-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.product-table-head {
+    font-size: 30px;
+    height: 100px;
+}
+
+
+.product-table thead tr {
+    background-color: #004080;
+    color: #ffffff;
+    text-align: center;
+}
+
+.column-heads th {
+    background-color: #004080;
+    padding: 12px 15px;
+    font-weight: bold;
+}
+
+
+.product-table tbody tr {
+    border-bottom: 1.5px solid #004080;
+    background-color: #00264d;
+    color: white;
+    text-decoration: none;
+}
+
+
+    .product-table tbody tr:hover {
+        background-color: #004080;
+    }
+
+
+.product-table tbody td {
+    text-align: center;
+    padding: 12px 15px;
+}
+
+
+.PO-btn-A {
+    background-color: #008000;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+    .PO-btn-A:hover {
+        background-color: #e6ffff;
+        color: #008000;
+    }
+
+.PO-btn-R {
+    background-color: #b30000;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+    .PO-btn-R:hover {
+        background-color: #e6ffff;
+        color: #b30000;
+    }
+
+/*AM and PC Claims list end*/
+
+/*Logout*/
+.logout-div{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    align-items:center;
+    width:500px;
+    height:300px;
+}
+.logout-container {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logout-div button {
+    margin-top: 10px;
+    color: white;
+    background-color: black;
+}
+.logout-div button:hover{
+    background-color:darkgrey
+
+}
+/*Logout end*/
+
+/*Edit Lecturer*/
+.editLform{
+    width: 500px;
+    height: 500px;
+}
+.editLBody{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    width:100%;
+}
+
+/*Edit Lecturer end*/

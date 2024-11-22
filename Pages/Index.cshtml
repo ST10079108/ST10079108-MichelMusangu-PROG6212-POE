@@ -1,0 +1,55 @@
+﻿@page
+
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<style>
+    #AP-Claims, #Lecturer-Claims, #Lecturer-Add {
+        display: none;
+    }
+</style>
+
+<div class="home-body">
+    <div class="home-sec1">
+        <img src="~/images/logo.jpg" />
+    </div>
+    <div class="home-body-links">
+       
+            <a asp-controller="Claims" asp-action="Add">New Claim</a>
+            <a asp-controller="HR" asp-action="ViewLecturers">Manage Lecturers</a>
+            <a asp-controller="Claims" asp-action="List">Claim Status</a>
+       
+            
+        
+        
+    </div>
+    <div class="home-sec2">
+        <div class="hs2-child">
+            <img src="~/images/pl1.jpeg" />
+            <p>
+                TechTeach – primary provider of educational software for university labs
+            </p>
+        </div>
+        <div class="hs2-child">
+            <img src="~/images/pl2.jpeg" />
+            <p>
+                GreenCampus – partner for eco-friendly campus initiatives and recycling programs
+            </p>
+        </div>
+        <div class="hs2-child">
+            <img src="~/images/pl3.jpeg" />
+            <p>
+                GradPath – key internship provider for students in business and marketing programs
+            </p>
+        </div>
+        <div class="hs2-child">
+            <img src="~/images/pl4.jpeg" />
+            <p>
+                FoodFusion – exclusive dining service operator for all university cafeterias
+            </p>
+        </div>
+    </div>
+</div>
+

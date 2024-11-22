@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewData["Title"] = "Pending Claims";
+}
+@model List<ClaimsPoe.Models.Entities.Claim>
+
+
+
+<div class="AMAP-Claims-body">
+    <table class="product-table">
+        <thead>
+            <tr>
+                <th colspan="10" class="product-table-head">Pending Claims</th>
+            </tr>
+            <tr class="column-heads">
+                <th>Claim ID</th>
+                <th>Lecturer Name</th>
+                <th>Description</th>
+                <th>Hours Worked</th>
+                <th>Rate</th>
+                <th>Total</th>
+                <th>Document</th>
+                <th>Lecturer Email</th>
+                <th> </th>
+                <th> </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var claim in Model)
+            {
+                <tr>
+                    @if (claim.Status == "Pending")
+                    {
+                        <td>@claim.Id</td>
+                        <td>@claim.Name</td>
+                        <td>@claim.Description</td>
+                        <td>@claim.HoursWorked</td>
+                        <td>@claim.Rate</td>
+                        <td>@claim.Total</td>
+                        <td>@claim.Document</td>
+                        <td>@claim.LecturerId</td>
+                        <td>
+                            <a asp-controller="Claims" asp-action="Approve" asp-route-id="@claim.Id" class="PO-btn-A">Approve</a>
+                        </td>
+                        <td>
+                            <a asp-controller="Claims" asp-action="Reject" asp-route-id="@claim.Id" class="PO-btn-R">Reject</a>
+                        </td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

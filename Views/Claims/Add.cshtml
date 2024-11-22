@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewData["Title"] = "Submit Claim";
+}
+@model ClaimsPoe.Models.AddClaimModel
+
+<div class="add-body">
+
+    <div class="ab-para">
+        <h1>Submit Claim</h1>
+        <h2>Form for lecturers to submit a claim</h2>
+        <p>Ensure that all fields are entered, except the "total" field, this field is filled once 
+            you have entered both hours worked and rate, and clicked the calculate total button</p>
+    </div>
+
+    <form method="post" class="claim-form" id="ClaimForm">
+        <div class="form-section hidden">
+            <label for="Id">Id</label>
+            <input type="number" id="Id" asp-for="Id" />
+        </div>
+
+        <div class="form-section">
+
+            <input placeholder="Name" type="text" id="Name" asp-for="Name" required />
+        </div>
+
+        <div class="form-section">
+
+            <input placeholder="Description" type="text" id="Description" asp-for="Description" required />
+        </div>
+
+        <div class="form-section">
+
+            <input placeholder="Hours Worked" type="number" id="Hours" name="Hours" asp-for="Hours" required />
+        </div>
+
+        <div class="form-section">
+
+            <input placeholder="Rate" type="number" id="Rate" name="Rate" asp-for="Rate" required />
+        </div>
+
+        <div class="form-section">
+            <button class="btn-submit" type="button" onclick="calculateTotal()">Calculate Total</button>
+        </div>
+
+        <div class="form-section">
+            <input placeholder="Total" type="number" id="Total" value="" asp-for="Total" required />
+        </div>
+
+        <div class="form-section hidden">
+            <label for="Status">Status</label>
+            <input type="text" id="Status" name="Status" asp-for="Status" readonly />
+        </div>
+
+        <div class="form-section">
+
+            <input type="file" id="myFile" name="filename">
+            <div id="fileError" style="display:none; color:red;"> Maximum allowed size is 2 MB.</div>
+        </div>
+
+        <div class="form-section">
+            <input placeholder="Document" type="text" id="Document" asp-for="Document" required readonly/>
+        </div>
+
+        <div class="form-section">
+            <button  type="submit" class="btn-submit">Submit</button>
+        </div>
+    </form>
+</div>
